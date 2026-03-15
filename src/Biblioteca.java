@@ -28,4 +28,38 @@ public class Biblioteca {
         }
     }
 
+    public boolean prestarLibro(String titulo) {
+        for (int i = 0; i < contador; i++) {
+            if (catalogo[i].getTitulo().equalsIgnoreCase(titulo)) {
+                if (!catalogo[i].isPrestado()) {
+                    catalogo[i].setPrestado(true);
+                    System.out.println("El libro ha sido prestado.");
+                    return true;
+                } else {
+                    System.out.println("El libro ya está prestado.");
+                    return false;
+                }
+            }
+        }
+        System.out.println("Libro no encontrado.");
+        return false;
+    }
+
+    public boolean devolverLibro(String titulo) {
+        for (int i = 0; i < contador; i++) {
+            if (catalogo[i].getTitulo().equalsIgnoreCase(titulo)) {
+                if (catalogo[i].isPrestado()) {
+                    catalogo[i].setPrestado(false);
+                    System.out.println("El libro ha sido devuelto.");
+                    return true;
+                } else {
+                    System.out.println("Ese libro no estaba prestado.");
+                    return false;
+                }
+            }
+        }
+        System.out.println("Libro no encontrado.");
+        return false;
+    }
+
 }
