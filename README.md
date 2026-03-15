@@ -21,7 +21,7 @@ Elementos de la clase biblioteca `.Biblioteca`:
   >Contiene los libros y todos los métodos relacionados para mostrarlo en App/Main.
 
   
-Elementos de la clase biblioteca `.Libros`:
+Elementos de la clase libros `.Libros`:
 
 * Constructor.
 * Título y Autor.
