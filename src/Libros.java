@@ -2,6 +2,7 @@ public class Libros {
 
     protected String autor;
     protected String nombre;
+    protected boolean prestado;
 
     public Libros(String autor, String nombre) {
         this.autor = autor;
